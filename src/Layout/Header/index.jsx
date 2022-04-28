@@ -13,7 +13,7 @@ function index() {
         <div className="d-flex justify-content-between star-group align-items-center">
           {/* <p className="m-0 p-0"></p> */}
           <AiFillStar />
-          <p className="m-0 p-0">9999</p>
+          <p className="m-0 p-0">99999</p>
         </div>
       </div>
     </div>
