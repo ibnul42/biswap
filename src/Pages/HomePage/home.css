@@ -1,0 +1,8 @@
+.home {
+  height: inherit;
+}
+.right {
+  background-color: #231f20;
+  border-radius: 20px;
+  margin-right: 15px !important;
+}

@@ -1,0 +1,43 @@
+.header {
+  height: 80px;
+  /* background-color: brown; */
+}
+
+.connect-wallet {
+  margin-left: 15px;
+  padding: 10px 30px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90.06deg,
+    #c6f9ca 2.74%,
+    #abf2ba 59.28%,
+    #7de6a0 101.42%
+  );
+  border: none;
+  cursor: pointer;
+  box-shadow: 10px 11px 19px -3px rgba(5, 5, 5, 0.41);
+}
+
+.title {
+  background-color: #292f53;
+  width: 300px;
+  border-radius: 999px;
+  box-shadow: inset 1px 1px 10px #000000;
+}
+
+.star-coin {
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid gray;
+  background: #323261;
+  cursor: pointer;
+  box-shadow: 10px 11px 19px -3px rgba(5, 5, 5, 0.41);
+}
+
+.star-group {
+  width: 100px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  margin: 4px;
+  border-radius: 999px;
+}

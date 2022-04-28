@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import Layout from "./Layout";
 
 function App() {
+  useEffect(() => {
+    document.body.style.background = "rgb(33, 34, 64)";
+    document.body.style.margin = "0px";
+    document.body.style.padding = "0px";
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="text-white">
+      <Layout />
     </div>
   );
 }
