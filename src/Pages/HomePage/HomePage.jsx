@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import "./home.css";
-import { BsDiscord, BsTelegram } from "react-icons/bs";
-import { FiMail } from "react-icons/fi";
-import { AiFillFacebook } from "react-icons/ai";
-import { FaTwitterSquare, FaInstagramSquare } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
+import discord from "../../assets/Get-In-Touch-Discord.png";
+import email from "../../assets/Get-In-Touch-Mail.png";
+import telegram from "../../assets/Get-In-Touch-Telegram.png";
+import twitter from "../../assets/twitter.png";
+import instagram from "../../assets/instagram.png";
+import facebook from "../../assets/facebook.png";
 
-function HomePage() {
+function HomePage({
+  currentIndex,
+  setCurrentIndex,
+  currentState,
+  setCurrentState,
+  selectedStateShown,
+  walletHandler,
+  setSelectedStateShown,
+}) {
   const [items, setItems] = useState([
     { name: "Play" },
     { name: "Tournaments & Bets" },
@@ -16,24 +26,27 @@ function HomePage() {
     { name: "NFT Mutation" },
     { name: "NFT MarketPlace" },
   ]);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <div className="container-fluid home">
       <div
-        className="row d-flex justify-content-between"
+        className="row d-flex justify-content-between main-menu"
         style={{ height: "96%" }}
       >
-        <div className="col-3 ps-0 d-flex flex-column justify-content-between">
+        <div className=" col-sm-12 col-md-4 ps-0 d-flex flex-column justify-content-between left-menu">
           <div className="menu-items">
             <ul className="list-unstyled my-1">
               {items.map((item, index) => (
                 <li
                   key={index}
                   className={`d-flex justify-content-between align-items-center ml-0 mr-2 my-2 px-3 py-2 ${
-                    index === currentIndex ? "active" : ""
+                    index === currentIndex ? "active" : "inactive"
                   }`}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => {
+                    setCurrentIndex(index);
+                    setCurrentState(item.name);
+                    setSelectedStateShown(false);
+                  }}
                 >
                   <p className="m-0 p-0">{item.name}</p>
                   {index !== currentIndex && <RiArrowRightSLine />}
@@ -42,55 +55,25 @@ function HomePage() {
             </ul>
           </div>
           <div className="social">
-            <div className="d-flex flex-column justify-content-center align-items-center mb-3">
+            <div className="d-flex flex-column justify-content-center align-items-center mb-3 right-menu">
               <p className="m-0 p-0">Get in Touch</p>
               <div className="icons">
-                <BsDiscord
-                  size={"25px"}
-                  className="m-2"
-                  color="#5b6ab3"
-                  cursor="pointer"
-                />
-                <BsTelegram
-                  size={"25px"}
-                  className="m-2"
-                  color="#1a8dd6"
-                  cursor="pointer"
-                />
-                <FiMail
-                  size={"25px"}
-                  className="m-2"
-                  color="#d54c1a"
-                  cursor="pointer"
-                />
+                <img src={discord} alt="discord" className="icon-style" />
+                <img src={telegram} alt="telegram" className="icon-style" />
+                <img src={email} alt="email" className="icon-style" />
               </div>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center mb-3">
               <p className="m-0 p-0">Follow us on</p>
               <div className="icons">
-                <FaTwitterSquare
-                  size={"25px"}
-                  className="m-2"
-                  color="white"
-                  cursor="pointer"
-                />
-                <FaInstagramSquare
-                  size={"25px"}
-                  className="m-2"
-                  color="#c82e76"
-                  cursor="pointer"
-                />
-                <AiFillFacebook
-                  size={"25px"}
-                  className="m-2"
-                  color="#3c5a99"
-                  cursor="pointer"
-                />
+                <img src={twitter} alt="twitter" className="icon-style" />
+                <img src={instagram} alt="instagram" className="icon-style" />
+                <img src={facebook} alt="facebook" className="icon-style" />
               </div>
             </div>
           </div>
         </div>
-        <div className="col-8 right d-flex justify-content-center align-items-center">
+        <div className="col-sm-12 col-md-8 right d-flex justify-content-center align-items-center right-menu">
           <p>Empty container</p>
         </div>
       </div>

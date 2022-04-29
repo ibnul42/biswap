@@ -1,9 +1,16 @@
-.header {
-  height: 80px;
-  /* background-color: brown; */
+.navbar-brand {
+  width: 31% !important;
+}
+
+.navbar-collapse {
+  width: 66% !important;
 }
 
 .connect-wallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
   margin-left: 15px;
   padding: 10px 30px;
   border-radius: 999px;
@@ -15,14 +22,25 @@
   );
   border: none;
   cursor: pointer;
+  font-weight: 700;
   box-shadow: 10px 11px 19px -3px rgba(5, 5, 5, 0.41);
+  /* order: 1; */
+}
+
+.selected-state {
+  margin-top: 10px;
+  height: 35px;
+  width: 90%;
+  /* width: 150px; */
+  /* background-color: white; */
 }
 
 .title {
   background-color: #292f53;
-  width: 300px;
+  /* width: 300px; */
   border-radius: 999px;
   box-shadow: inset 1px 1px 10px #000000;
+  /* order: 2; */
 }
 
 .star-coin {
@@ -32,6 +50,9 @@
   background: #323261;
   cursor: pointer;
   box-shadow: 10px 11px 19px -3px rgba(5, 5, 5, 0.41);
+  display: flex;
+  justify-content: center;
+  width: 150px;
 }
 
 .star-group {
@@ -40,4 +61,13 @@
   border: 1px solid gray;
   margin: 4px;
   border-radius: 999px;
+}
+
+@media screen and (max-width: 990px) {
+  .navbar-nav li {
+    width: 100% !important;
+  }
+  .coin-mobile {
+    justify-content: flex-start !important;
+  }
 }
