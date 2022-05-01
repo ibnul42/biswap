@@ -27,6 +27,27 @@
   /* order: 1; */
 }
 
+.connected-wallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  margin-left: 15px;
+  padding: 10px 30px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90.06deg,
+    #973a95 2.74%,
+    #a839c3 59.28%,
+    #97338d 101.42%
+  );
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 10px 11px 19px -3px rgba(5, 5, 5, 0.41);
+  /* order: 1; */
+}
+
 .selected-state {
   margin-top: 10px;
   height: 35px;
@@ -64,8 +85,29 @@
 }
 
 @media screen and (max-width: 990px) {
+  .connect-wallet {
+    min-width: 165px;
+    margin-left: 5px !important;
+  }
   .navbar-nav li {
     width: 100% !important;
+  }
+  .connected-wallet {
+    min-width: 170px;
+    margin-left: 5px !important;
+  }
+  .star-coin {
+    width: 120px !important;
+    margin-right: 5px !important;
+  }
+  .star-group {
+    padding: 1px 2px;
+  }
+  .margin-left-5 {
+    margin-left: 5px !important;
+  }
+  .margin-right-5 {
+    margin-right: 5px !important;
   }
   .coin-mobile {
     justify-content: flex-start !important;

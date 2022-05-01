@@ -8,10 +8,12 @@ function Index() {
   const [currentIndex, setCurrentIndex] = useState(null);
   const [currentState, setCurrentState] = useState("");
   const [selectedStateShown, setSelectedStateShown] = useState(false);
+  const [walletConnected, setWalletConnected] = useState(false);
 
   const walletHandler = (e) => {
     e.preventDefault();
     setSelectedStateShown(true);
+    setWalletConnected(true);
   };
   return (
     <div className="layout container-fluid vh-100 d-flex flex-column">
@@ -23,6 +25,8 @@ function Index() {
         selectedStateShown={selectedStateShown}
         walletHandler={walletHandler}
         setSelectedStateShown={setSelectedStateShown}
+        walletConnected={walletConnected}
+        setWalletConnected={setWalletConnected}
       />
       <Content
         currentIndex={currentIndex}
